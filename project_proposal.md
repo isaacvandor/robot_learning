@@ -33,7 +33,7 @@ For this project, we will use a top-down approach as we intent to apply known fr
 To start, we will make use of the [Speech Commands Dataset](https://arxiv.org/abs/1804.03209), which includes over 105,000 WAVE audio files of people saying 30 different words. If we need more data than that, we can collect our own voices or continue to leverage existing datasets like [Mozilla's Common Voice](https://www.kaggle.com/mozillaorg/common-voice) and others.
 
 ## What sorts of learning algorithms will you apply?  You could choose these based on what you think will work the best or what you want to learn about the most.
-One of the strategies we could try is PCA.
+There are a number of learning algorithms that can be used for voice recognition on the Neatos. One of the strategies we could try is PCA while another option is to create a convolutional neural network and feed new voice clips into it to do the recognition component. One of the early explorations of this project will be testing out the vartious learning algorithms possible for this and moving forward with the one that produces the best results.
 
 ## What non-learning baseline algorithm will you compare to?
 While there is not necessarily an algorithm for voice recognition, one of the most common approaches used prior to the use of deep learning techniques was template matching. Essentially, a set of audio clips is stored and then a second set is matched against all of the clips in the first set until a match is found. We can evaluate the successes and drawbacks of our own implementations by comparing the run time and the accuracy of the template matching with our deep learning approach.
