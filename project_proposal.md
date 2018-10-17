@@ -16,6 +16,12 @@ Nina Tchirkova and Isaac Vandor
 
 [Voice Recognition Tech Using Neural Nets](https://www.researchgate.net/publication/279448703_Voice_Recognition_Technology_Using_Neural_Networks)
 
+[Speech Recognition for Robot Control](http://www8.cs.umu.se/education/examina/Rapporter/ShafkatKibria.pdf)
+
+[Connectionist Temporal Classification](http://www.cs.toronto.edu/~graves/icml_2006.pdf)
+
+[CMUSphinx](https://cmusphinx.github.io/)
+
 ## In terms of the system that you will have running on the robot, what is your MVP?  What is your stretch goal?
 
 ## Describe your learning orientation (top-down versus bottom-up) and why you have chosen it.  In particular if you choose bottom-up, make sure you specify what this will mean (e.g., which algorithms will you implement, will you eventually switch to a standard toolkit, etc.).
@@ -27,3 +33,4 @@ To start, we will make use of the [Speech Commands Dataset](https://arxiv.org/ab
 ## What sorts of learning algorithms will you apply?  You could choose these based on what you think will work the best or what you want to learn about the most.
 
 ## What non-learning baseline algorithm will you compare to?
+While there is not necessarily an algorithm for voice recognition, one of the most common approaches used prior to the use of deep learning techniques was template matching. Essentially, a set of audio clips is stored and then a second set is matched against all of the clips in the first set until a match is found. We can evaluate the successes and drawbacks of our own implementations by comparing the run time and the accuracy of the template matching with our deep learning approach.
