@@ -21,6 +21,7 @@ Nina Tchirkova and Isaac Vandor
 ## Describe your learning orientation (top-down versus bottom-up) and why you have chosen it.  In particular if you choose bottom-up, make sure you specify what this will mean (e.g., which algorithms will you implement, will you eventually switch to a standard toolkit, etc.).
 
 ## What is your data collection plan?  How do you plan to get the data needed for your project?  How much data do you think you'll need?  Are there existing datasets you can leverage?
+To start, we will make use of the [Speech Commands Dataset](https://arxiv.org/abs/1804.03209), which includes over 105,000 WAVE audio files of people saying 30 different words. If we need more data than that, we can collect our own voices or continue to leverage existing datasets like [Mozilla's Common Voice](https://www.kaggle.com/mozillaorg/common-voice) and others.
 
 ## What sorts of learning algorithms will you apply?  You could choose these based on what you think will work the best or what you want to learn about the most.
 
