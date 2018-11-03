@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# clear stream recordings folder
+rm ../data/stream_recordings/*
+
+rm ../data/ogg_files/*
+
+# go to stream recordings folder
+cd ../data/stream_recordings
+
+#start recording (security is not a concern)
+sshpass -p raspberry ssh pi@192.168.17.201 "~pi/use_case_scripts/ride-of-the-neatos/audio_stream.sh -q" > stream.wav
