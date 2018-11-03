@@ -2,7 +2,7 @@
 
 from __future__ import print_function
 from geometry_msgs.msg import PointStamped, PointStamped
-from std_msgs.msg import Header
+from std_msgs.msg import Header, String
 from neato_node.msg import Bump
 from sensor_msgs.msg import LaserScan
 from visualization_msgs.msg import Marker
@@ -21,6 +21,9 @@ class Commands(object):
         rospy.init_node("Drive")
         self.pub = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
         rospy.Subscriber('/bump', Bump, self.process_bump)
+        rospy.Subscriber('/command_words', String, self.get_command)
+        self.command = ''
+        print(self.command)
 
     def process_bump(self, m):
         directions = self.make_twist(0,0)
@@ -62,26 +65,28 @@ class Commands(object):
 
 
 
-    def get_command(self):
+    def get_command(self, m):
         #TODO: get command from model
-        pass
-
+        self.command = m.data
+        print(self.command)
+            
     def run(self):
         while not rospy.is_shutdown():
-            command = self.get_command()
-
-            if command == 'yes' or command == 'up':
+            print(self.command == "bird")
+            if self.command == "bird" or self.command == 'up':
                 move = [1,0]
-            elif command == 'no' or command == 'down':
+            elif self.command == 'no' or self.command == 'down':
                 move = [-1,0]
-            elif command == 'stop' or command == 'off':
+            elif self.command == 'stop' or self.command == 'off':
                 move = [0,0]
-            elif command == 'left':
+            elif self.command == 'left':
                 move = [0,1]
-            elif command == 'right':
+            elif self.command == 'right':
                 move = [0,-1]
+            else:
+                move = [0, 0]
 
-            print(move)
+            # print(move)
             lin_vel = 1
             ang_vel = 1
 
@@ -91,7 +96,6 @@ class Commands(object):
             directions = self.make_twist(x_vel,theta_vel)
 
             self.pub.publish(directions)
-
 
 if __name__ == '__main__':
     settings = termios.tcgetattr(sys.stdin)
