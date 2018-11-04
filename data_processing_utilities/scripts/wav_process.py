@@ -5,7 +5,7 @@ import soundfile as sf
 import time
 
 #'/home/nina/catkin_ws/src/audio_bot/robot_learning/data_processing_utilities
-size_threshold = 23000
+size_threshold = 21000
 T1 = 0
 T2 = 1500 #milliseconds
 Interval = 100
@@ -23,8 +23,10 @@ while sf.info(stream_file).duration > (T2/1000):
     beg = size.index("Length")+9
     end = size.index("\n", beg)
     size = int(size[beg:end])
+    '''
     if size > size_threshold:
-        segment.export('../data/stream_recordings/%s.wav' %name, format="wav")
+    '''
+    segment.export('../data/stream_recordings/%s.wav' %name, format="wav")
     i += 1
     T1 += Interval
     T2 += Interval

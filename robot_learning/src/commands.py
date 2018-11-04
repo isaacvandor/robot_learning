@@ -66,14 +66,13 @@ class Commands(object):
 
 
     def get_command(self, m):
-        #TODO: get command from model
         self.command = m.data
         print(self.command)
             
     def run(self):
         while not rospy.is_shutdown():
             print(self.command == "bird")
-            if self.command == "bird" or self.command == 'up':
+            if self.command == "yes" or self.command == 'up':
                 move = [1,0]
             elif self.command == 'no' or self.command == 'down':
                 move = [-1,0]
