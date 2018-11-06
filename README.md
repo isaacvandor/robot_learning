@@ -15,6 +15,11 @@ This diagram describes a convolutional neural network similar to the one we used
 ![](https://cdn-images-1.medium.com/max/1600/1*NQQiyYqJJj4PSYAeWvxutg.png)
 
 The results of training our model against the [Google WAVES Dataset](https://aiyprojects.withgoogle.com/open_speech_recording) 
+
+Loss | Accuracy | Val_Loss | Val_Acc
+--- | --- | --- | ---
+.6006 | .8167 | .1198 | .9352
+
 Loss: .6006 
 
 Accuracy: .8167 
