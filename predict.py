@@ -43,7 +43,7 @@ def parse_command_line(raw_args=None):
     # Use the Python argparser to parse command line input and provide
     # usage information and feedback should bad input be given or help
     # requested.
-    default_filename = 'speech_dataset/testing_dir/spectrogram1.png'
+    default_filename = 'speech_dataset/testing_dir/spectrogram.png'
 
     parser = ArgumentParser(
         description="Grab still images from a video."

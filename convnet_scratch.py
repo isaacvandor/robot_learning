@@ -4,6 +4,8 @@ from keras.layers import Conv2D, MaxPooling2D
 from keras.layers import Activation, Dropout, Flatten, Dense
 from keras import optimizers, utils
 from keras import backend as K
+from matplotlib import pyplot
+from numpy import array
 
 # dimensions of images
 img_width, img_height = 75, 75
@@ -12,8 +14,8 @@ train_data_dir = 'speech_dataset/train_dir'
 validation_data_dir = 'speech_dataset/validation_dir'
 nb_train_samples = 2160
 nb_validation_samples = 540
-epochs = 9
-batch_size = 12
+epochs = 10
+batch_size = 5
 
 # change the number of layers --> 2 to 6
 
@@ -53,6 +55,8 @@ model.compile(loss='binary_crossentropy',
 '''
 SGD = optimizers.SGD(lr=0.01, momentum=0.0, decay=0.0, nesterov=False)
 model.compile(loss = 'categorical_crossentropy' , optimizer = 'SGD' , metrics = ['accuracy'] )
+#model.compile(loss='mean_absolute_error', optimizer='adam', metrics=['accuracy'])
+
 
 # this is the augmentation configuration we will use for training
 train_datagen = ImageDataGenerator(
