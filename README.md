@@ -3,6 +3,7 @@ This is the repository for the robot learning project by Nina Tchirkova and Isaa
 
 ## To learn more:
 [See the writeup](https://github.com/isaacvandor/robot_learning/blob/master/project_writeup.md)
+
 [Read the papers linked here](https://github.com/isaacvandor/robot_learning/blob/master/project_proposal.md)
 
 ## To get up and running:
