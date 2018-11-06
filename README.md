@@ -4,6 +4,8 @@ This is the repo for the comprobo robot learning project by Nina Tchirkova and I
 ## Project Goals
 The goal of this project was to have a robot be able to "hear" a command and respond to it by doing a certain behavior. The way the robot would interpret the sound was by using a neural net that was trained on many sound files of people saying words. 
 
+![gif](neato_learning.gif)
+
 ## Implementation
 Loss: .6006 
 
