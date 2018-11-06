@@ -11,7 +11,8 @@ To convert spoken keywords into useful robot commands, we recorded WAV files, co
 
 The convolutional neural network used was based on [this research work](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43969.pdf) and consisted of a number of 2D convolutional layers, MaxPooling layers, and fully connected layers at the end. 
 
-[This diagram describes a convolutional neural network similar to the one we used for this project:](https://cdn-images-1.medium.com/max/1600/1*NQQiyYqJJj4PSYAeWvxutg.png)
+This diagram describes a convolutional neural network similar to the one we used for this project:
+![](https://cdn-images-1.medium.com/max/1600/1*NQQiyYqJJj4PSYAeWvxutg.png)
 
 The results of training our model against the [Google WAVES Dataset](https://aiyprojects.withgoogle.com/open_speech_recording) 
 Loss: .6006 
