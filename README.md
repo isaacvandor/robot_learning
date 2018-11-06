@@ -14,19 +14,13 @@ The convolutional neural network used was based on [this research work](https://
 This diagram describes a convolutional neural network similar to the one we used for this project:
 ![](https://cdn-images-1.medium.com/max/1600/1*NQQiyYqJJj4PSYAeWvxutg.png)
 
-The results of training our model against the [Google WAVES Dataset](https://aiyprojects.withgoogle.com/open_speech_recording) 
+The results of training our model against the [Google WAVES Dataset](https://aiyprojects.withgoogle.com/open_speech_recording) are below:
 
 Loss | Accuracy | Val_Loss | Val_Acc
 --- | --- | --- | ---
 .6006 | .8167 | .1198 | .9352
 
-Loss: .6006 
-
-Accuracy: .8167 
-
-Val Loss: .1198 
-
-Val Acc: .9352
+The precise implementation of the model as well as the parameter information (as given by model.summary()) is shown in the image below:
 
 ![data](summary.png)
 
