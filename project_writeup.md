@@ -1,5 +1,5 @@
 # Robot Learning
-This is the repo for the comprobo robot learning project by Nina Tchirkova and Isaac Vandor 
+This is the writeup for the comprobo robot learning project by Nina Tchirkova and Isaac Vandor 
 
 ## Project Goals
 The goal of this project was to have a robot be able to "hear" a command and respond to it by doing a certain behavior. The way the robot would interpret the sound was by using a neural net that was trained on many sound files of people saying words. The GIF below shows the output of recording someone saying the word "down" and passing that into the neural net, which correctly identified the spoken word and outputted down to the robot command logic. 
