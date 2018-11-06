@@ -2,8 +2,8 @@
 This is the repository for the robot learning project by Nina Tchirkova and Isaac Vandor
 
 ## To learn more:
-See the writeup:
-Read the papers linked here: 
+See the writeup: https://github.com/isaacvandor/robot_learning/blob/master/project_writeup.md
+Read the papers linked here: https://github.com/isaacvandor/robot_learning/blob/master/project_proposal.md
 
 ## To get up and running:
 1. Go to this Google Drive link to download the dataset used: https://drive.google.com/drive/folders/1EBNk1qrS5vjNRIgOwIoJWuwqBjcyWvA8?usp=sharing
