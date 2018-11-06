@@ -2,11 +2,18 @@
 This is the repo for the comprobo robot learning project by Nina Tchirkova and Isaac Vandor 
 
 ## Project Goals
-The goal of this project was to have a robot be able to "hear" a command and respond to it by doing a certain behavior. The way the robot would interpret the sound was by using a neural net that was trained on many sound files of people saying words. 
+The goal of this project was to have a robot be able to "hear" a command and respond to it by doing a certain behavior. The way the robot would interpret the sound was by using a neural net that was trained on many sound files of people saying words. The GIF below shows the output of recording someone saying the word "down" and passing that into the neural net, which correctly identified the spoken word and outputted down to the robot command logic. 
 
 ![gif](neato_learning.gif)
 
 ## Implementation
+To convert spoken keywords into useful robot commands, we recorded WAV files, converted them to spectrograms, and then compared live spectrograms against a pre-trained convolutional neural network which outputted the most likely keyword it detected and passed that keyword into the robot command logic. 
+
+The convolutional neural network used was based on [this research work](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43969.pdf) and consisted of a number of 2D convolutional layers, MaxPooling layers, and fully connected layers at the end. 
+
+[This diagram describes a convolutional neural network similar to the one we used for this project:](https://cdn-images-1.medium.com/max/1600/1*NQQiyYqJJj4PSYAeWvxutg.png)
+
+The results of training our model against the [Google WAVES Dataset](https://aiyprojects.withgoogle.com/open_speech_recording) 
 Loss: .6006 
 
 Accuracy: .8167 
