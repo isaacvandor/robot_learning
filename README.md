@@ -32,10 +32,10 @@ To collect test data, sound data is collected by connecting to a Raspberry Pi th
 To model other natural language processing systems, we decided to work with a continuous stream of input. This meant that most of the sound we were recording was not even a word. This presented some extra challenges but we learned that using Python, it is possible to simultaneously read and write to the same file.
 
 ## Challenges
-A major challenge we encountered was that our model was overfitting to the data set. This meant that every word was determined to be "bird".
+A major challenge we encountered was that our model was overfitting to the data set. This meant that every word was determined to be "bird". We were able to overcome this by better splitting the data into testing and validation sets as well as tweaking model parameters. However, we still did not come up with a model as reliably accurate as hoped.
 
 ## Future Work and Improvements
-One obvious improvement would be to improve the accuracy of our model. This could be done by determining what features of the spectogram are the most important and then condensing the spectorgrams to where those are located. There could also be better preprocessing of wav files so that truly relevant spectrograms are processed. 
+One obvious improvement would be to improve the accuracy of our model. This could be done by determining what features of the spectogram are the most important and then condensing the spectorgrams to where those are located. There could also be better preprocessing of wav files so that truly relevant spectrograms are processed. Additionally, the testing/validation split process currently pulls random spectrograms from each class, so there is the potential for overlap or picking similar spectrograms (i.e. spectrogram 434 is in the testing set and spectrogram 435 is in the validation set). Refining our process for splitting testing and training data as well as  better filtering the spectrograms should help improve the model. 
 
 ## Interesting Findings
-Although probably not advisable, it is totally possible to read from a file that is also being written to at the same time. We took care so that the model always read from a part that was already written. 
+Although probably not advisable, it is totally possible to read from a file that is also being written to at the same time. We took care so that the model always read from a part that was already written. Python truly is a beautiful language.
